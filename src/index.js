@@ -3,8 +3,18 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './stores';
 import App from './containers/App';
+import * as imagesActions from './actions/ImagesActions';
+
 
 const store = configureStore();
+
+console.log(store.getState());
+store.subscribe(() => {
+  console.log(store.getState());
+});
+
+store.dispatch(imagesActions.fetchImages());
+//store.dispatch(imagesActions.setImages([1,2,3]));
 
 render(
   <Provider store={store}>

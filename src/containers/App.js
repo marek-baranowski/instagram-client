@@ -23,9 +23,7 @@ class App extends Component {
  * HINT: if you adjust the initial type of your reducer, you will also have to
  *       adjust it here.
  */
-App.propTypes = {
-  actions: PropTypes.object.isRequired
-};
+App.propTypes = { actions: PropTypes.object.isRequired };
 function mapStateToProps(state) {
   /* Populated by react-webpack-redux:reducer */
   const props = {};
