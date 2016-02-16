@@ -2,20 +2,18 @@ require('normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-
-let yeomanImage = require('../images/yeoman.png');
+import { connect } from 'react-redux';
+import ImagesList from './ImageList';
 
 class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator"/>
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
+        <header>blablabla</header>
+        <ImagesList />
       </div>
     );
   }
 }
 
-AppComponent.defaultProps = {};
-
-export default AppComponent;
+export default connect()(AppComponent)

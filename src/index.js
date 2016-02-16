@@ -2,7 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './stores';
-import App from './containers/App';
+//import App from './containers/App';
+import Main from './components/Main';
 import * as imagesActions from './actions/ImagesActions';
 
 
@@ -18,7 +19,7 @@ store.dispatch(imagesActions.fetchImages());
 
 render(
   <Provider store={store}>
-    <App />
+    <Main />
   </Provider>,
   document.getElementById('app')
 );
