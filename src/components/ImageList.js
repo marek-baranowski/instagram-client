@@ -15,7 +15,8 @@ class ImageList extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  console.log(ownProps);
   return {images: state.images}
 }
 

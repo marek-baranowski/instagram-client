@@ -1,5 +1,6 @@
 import {handleActions} from 'redux-actions';
 import { combineReducers } from 'redux';
+import { routeReducer } from 'react-router-redux';
 
 const reducers = {
   images: handleActions({
@@ -17,6 +18,7 @@ const reducers = {
       isFetching: false,
       data: action.payload
     })
-  }, {isFetching: false, data: []})
+  }, {isFetching: false, data: []}),
+  routing: routeReducer
 };
 module.exports = combineReducers(reducers);
