@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { routeActions } from 'react-router-redux';
+import * as C from '../common/consts';
 import Loader from './Loader';
 
 class ImageList extends React.Component {
@@ -8,16 +10,26 @@ class ImageList extends React.Component {
     return (
       <div>
         {this.props.images.data.map(function (image, i) {
-          return <img key={i} src={image.images.thumbnail.url}/>
-        })}
+          return <img key={i} onClick={this.props.imageClick.bind(null, image.id)} src={image.images.thumbnail.url}/>
+        }.bind(this))}
       </div>
     );
   }
 }
 
-function mapStateToProps(state, ownProps) {
-  console.log(ownProps);
+function mapStateToProps(state) {
   return {images: state.images}
 }
 
-export default connect(mapStateToProps)(ImageList)
+function mapDispatchToProps(dispatch) {
+  return {
+    imageClick: (photoId) => {
+      dispatch(routeActions.push({
+        pathname: C.ROUTES.PHOTO_DETAILS,
+        search: '?photoId=' + photoId
+      }))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ImageList)
