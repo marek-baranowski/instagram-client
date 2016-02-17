@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import configureStore from './stores';
 //import App from './containers/App';
 import Main from './components/Main';
-import * as imagesActions from './actions/ImagesActions';
-
+import * as imageActions from './actions/ImageActions';
+import * as tagActions from './actions/TagActions';
 
 const store = configureStore();
 
@@ -14,8 +14,8 @@ store.subscribe(() => {
   console.log(store.getState());
 });
 
-store.dispatch(imagesActions.fetchImages());
-//store.dispatch(imagesActions.setImages([1,2,3]));
+store.dispatch(imageActions.fetchImages());
+store.dispatch(tagActions.setTags(["audi", "bmw", "mercedez"]));
 
 render(
   <Provider store={store}>

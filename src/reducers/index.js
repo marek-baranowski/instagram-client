@@ -11,6 +11,12 @@ const reducers = {
       isFetching: false,
       data: action.payload
     })
-  }, {isFetching: false, data: {}})
+  }, {isFetching: false, data: []}),
+  tags: handleActions({
+    SET_TAGS: (state, action) => ({
+      isFetching: false,
+      data: action.payload
+    })
+  }, {isFetching: false, data: []})
 };
 module.exports = combineReducers(reducers);
