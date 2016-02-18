@@ -8,10 +8,7 @@ import * as C from '../common/consts';
 
 class ImageListContainer extends React.Component {
   componentDidMount() {
-    //if (!this.props.images.isFetching && this.props.images.data.length == 0) {
-      let tag = this.props.location.query.tag || 'random';
-      this.props.fetchImagesByTag(tag);
-    //}
+      this.props.fetchImagesByTag(this.props.location.query.tag || 'random');
   }
 
   componentDidUpdate(prevProps) {
