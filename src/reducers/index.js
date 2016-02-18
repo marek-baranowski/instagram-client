@@ -4,7 +4,7 @@ import { routeReducer } from 'react-router-redux';
 
 const reducers = {
   images: handleActions({
-    IMAGES_ARE_LOADING: (state, action) => ({
+    IMAGES_ARE_LOADING: (state) => ({
       isFetching: true,
       data: state.data
     }),
