@@ -8,10 +8,10 @@ import * as C from '../common/consts';
 
 class ImageListContainer extends React.Component {
   componentDidMount() {
-    if (!this.props.images.isFetching && this.props.images.data.length == 0) {
+    //if (!this.props.images.isFetching && this.props.images.data.length == 0) {
       let tag = this.props.location.query.tag || 'random';
       this.props.fetchImagesByTag(tag);
-    }
+    //}
   }
 
   componentDidUpdate(prevProps) {
@@ -22,7 +22,7 @@ class ImageListContainer extends React.Component {
 
   render() {
     if (this.props.images.isFetching) return <Loader />;
-    return <ImageList images={this.props.images } imageClick={this.props.imageClick}/>;
+    return <ImageList images={this.props.images.data} imageClick={this.props.imageClick}/>;
   }
 }
 

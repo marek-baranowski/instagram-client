@@ -26,7 +26,7 @@ export function fetchImageById(imageId) {
   return [
     startFetchingImages(),
     bind(fetch(toYQL('https://api.instagram.com/v1/media/'+imageId+'?client_id=a778c35c48824baca6837071dba766df')),
-      ({value}) => setImages([value.query.results.json.data]), ({value}) => {
+      ({value}) => setImages(value.query.results.json.data), ({value}) => {
         console.log(999, value);
       })
   ]
