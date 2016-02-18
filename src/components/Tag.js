@@ -9,15 +9,4 @@ class Tag extends React.Component {
   }
 }
 
-function mapDispatchToProps(dispatch, ownProps) {
-  return {
-    tagClick: () => {
-      dispatch(routeActions.push({
-        pathname: C.ROUTES.PHOTOS_BY_TAG,
-        search: '?tag=' + ownProps.tag
-      }))
-    }
-  }
-}
-
-export default connect(null, mapDispatchToProps)(Tag)
+export default Tag

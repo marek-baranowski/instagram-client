@@ -1,3 +1,21 @@
 ul#tags li {
   display:inline;
 }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.comment-profile-picture {
+  float: left;
+}
+.comment-content {
+  float: left;
+}
+.comment-header {
+  font-weight: bold;
+}

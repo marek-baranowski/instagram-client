@@ -3,13 +3,13 @@ require('styles/App.css');
 
 import React from 'react';
 import { connect } from 'react-redux';
-import TagList from './TagList';
+import TagListContainer from '../containers/TagListContainer';
 
 class AppComponent extends React.Component {
   render() {
     return (
       <div className="index">
-        <header>Instagram client <TagList/></header>
+        <header>Instagram client <TagListContainer/></header>
         {this.props.children}
       </div>
     );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 class Loader extends React.Component {
   render() {
@@ -9,4 +8,4 @@ class Loader extends React.Component {
   }
 }
 
-export default connect()(Loader)
+export default Loader

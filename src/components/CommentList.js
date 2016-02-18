@@ -1,16 +1,17 @@
 import React from 'react';
+import Comment from './Comment'
 
 class CommentList extends React.Component {
   render() {
     if (!this.props.comments) return null;
     return (
-      <ul>
+      <div>
         {this.props.comments.map(function (comment, i) {
-          return <li key={i}>xxx</li>
+          return <Comment key={i} comment={comment}/>
         })}
-      </ul>
+      </div>
     );
   }
 }
 
-export default CommentList;
+export default CommentList
