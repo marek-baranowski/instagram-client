@@ -1,10 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { routeActions } from 'react-router-redux';
-import * as imageActions from '../actions/ImageActions';
 import TagList from '../components/TagList';
 import Loader from '../components/Loader';
-import * as C from '../common/consts';
 
 class TagListContainer extends React.Component {
   render() {

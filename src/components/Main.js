@@ -2,10 +2,9 @@ require('normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-import { connect } from 'react-redux';
 import TagListContainer from '../containers/TagListContainer';
 
-class AppComponent extends React.Component {
+class MainComponent extends React.Component {
   render() {
     return (
       <div className="index">
@@ -16,4 +15,4 @@ class AppComponent extends React.Component {
   }
 }
 
-export default connect()(AppComponent)
+export default MainComponent

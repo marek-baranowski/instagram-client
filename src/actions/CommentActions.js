@@ -15,9 +15,7 @@ function toYQL(url) {
 export function fetchComments(photoId) {
   return [
     startFetchingComments(),
-    bind(fetch(toYQL('https://api.instagram.com/v1/media/'+photoId+'/comments?client_id=a778c35c48824baca6837071dba766df')),
-      ({value}) => setComments(value.query.results.json.data), ({value}) => {
-        console.log(999, value);
-      })
+    bind(fetch(toYQL('https://api.instagram.com/v1/media/' + photoId + '/comments?client_id=a778c35c48824baca6837071dba766df')),
+      ({value}) => setComments(value.query.results.json.data))
   ]
 }
