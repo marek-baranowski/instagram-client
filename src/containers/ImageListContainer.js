@@ -24,7 +24,7 @@ class ImageListContainer extends React.Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {images: state.images}
 }
 

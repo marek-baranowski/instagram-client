@@ -10,11 +10,6 @@ import * as C from './utils/consts';
 
 const store = configureStore();
 
-console.log(store.getState());
-store.subscribe(() => {
-  console.log(store.getState());
-});
-
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
