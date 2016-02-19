@@ -6,7 +6,7 @@ const baseUrl = 'https://api.instagram.com/v1/',
  * @param {String} url - Url to be wrapped
  */
 function toYQL(url) {
-  const yqlUrl = 'http://query.yahooapis.com/v1/public/yql?q=',
+  const yqlUrl = 'https://query.yahooapis.com/v1/public/yql?q=',
     query = 'select * from json where url="{url}"'.replace('{url}', url);
   return yqlUrl + encodeURIComponent(query) + '&format=json';
 }
