@@ -6,7 +6,7 @@ class Tag extends React.Component {
     return false;
   }
   render() {
-    return <a href="#" className="header__tag" onClick={this.props.tagClick.bind(this)}>#{this.props.tag}</a>;
+    return <a href="" className="header__tag" onClick={this.props.tagClick.bind(this)}>#{this.props.tag}</a>;
   }
 }
 
