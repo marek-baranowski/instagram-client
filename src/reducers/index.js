@@ -2,32 +2,27 @@ import {handleActions} from 'redux-actions';
 import { combineReducers } from 'redux';
 import { routeReducer } from 'react-router-redux';
 
+const commonSetDataReducer = (state, action) => ({
+  isFetching: false,
+  data: action.payload && !Array.isArray(action.payload) ? [action.payload] : action.payload
+});
+
+const commonStartFetchingDataReducer = (state) => ({
+  isFetching: true,
+  data: state.data
+});
+
 const reducers = {
   images: handleActions({
-    IMAGES_ARE_LOADING: (state) => ({
-      isFetching: true,
-      data: state.data
-    }),
-    SET_IMAGES: (state, action) => ({
-      isFetching: false,
-      data: action.payload && !Array.isArray(action.payload) ? [action.payload] : action.payload
-    })
+    IMAGES_ARE_LOADING: commonStartFetchingDataReducer,
+    SET_IMAGES: commonSetDataReducer
   }, {isFetching: false, data: []}),
   tags: handleActions({
-    SET_TAGS: (state, action) => ({
-      isFetching: false,
-      data: action.payload && !Array.isArray(action.payload) ? [action.payload] : action.payload
-    })
+    SET_TAGS: commonSetDataReducer
   }, {isFetching: false, data: []}),
   comments: handleActions({
-    COMMENTS_ARE_LOADING: (state) => ({
-      isFetching: true,
-      data: state.data
-    }),
-    SET_COMMENTS: (state, action) => ({
-      isFetching: false,
-      data: action.payload && !Array.isArray(action.payload) ? [action.payload] : action.payload
-    })
+    COMMENTS_ARE_LOADING: commonStartFetchingDataReducer,
+    SET_COMMENTS: commonSetDataReducer
   }, {isFetching: false, data: []}),
   routing: routeReducer
 };
