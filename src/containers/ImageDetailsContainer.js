@@ -13,8 +13,8 @@ class ImageDetailsContainer extends React.Component {
 
   render() {
     if (this.props.images.isFetching) return <Loader />;
-    return <ImageDetails goBack={this.props.goBack}
-                         image={_.find(this.props.images.data, {'id': this.props.location.query.photoId})}/>;
+    const image = _.find(this.props.images.data, {'id': this.props.location.query.photoId});
+    return <ImageDetails goBack={this.props.goBack} image={image}/>;
   }
 }
 

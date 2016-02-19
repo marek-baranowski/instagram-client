@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { routeActions } from 'react-router-redux';
 import Tag from '../components/Tag';
-import * as C from '../common/consts';
+import * as C from '../utils/consts';
 
 class TagContainer extends React.Component {
   render() {

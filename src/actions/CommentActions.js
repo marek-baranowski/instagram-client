@@ -1,7 +1,7 @@
 import {createAction} from 'redux-actions';
 import {bind} from 'redux-effects';
 import {fetch} from 'redux-effects-fetch';
-import {comments} from '../common/APIendpoints';
+import {comments} from '../utils/APIendpoints';
 
 const startFetchingComments = createAction('COMMENTS_ARE_LOADING');
 const setComments = createAction('SET_COMMENTS');

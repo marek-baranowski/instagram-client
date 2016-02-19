@@ -4,7 +4,7 @@ import { routeActions } from 'react-router-redux';
 import * as imageActions from '../actions/ImageActions';
 import ImageList from '../components/ImageList';
 import Loader from '../components/Loader';
-import * as C from '../common/consts';
+import * as C from '../utils/consts';
 
 class ImageListContainer extends React.Component {
   componentDidMount() {

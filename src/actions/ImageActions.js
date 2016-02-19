@@ -1,7 +1,7 @@
 import {createAction} from 'redux-actions';
 import {bind} from 'redux-effects';
 import {fetch} from 'redux-effects-fetch';
-import {imagesByTag, imageById} from '../common/APIendpoints';
+import {imagesByTag, imageById} from '../utils/APIendpoints';
 
 const startFetchingImages = createAction('IMAGES_ARE_LOADING');
 const setImages = createAction('SET_IMAGES');
