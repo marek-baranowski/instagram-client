@@ -1,9 +1,10 @@
 import React from 'react';
+import moment from 'moment';
 
 class Comment extends React.Component {
   render() {
     const {comment} = this.props;
-    const time = new Date(parseInt(comment.created_time) * 1000).toLocaleString();
+    const time = moment.unix(parseInt(comment.created_time)).format('hh:mm YYYY-MM-DD');
     return (
       <div className="comments clearfix">
         <div className="comments__profile-picture"><img src={comment.from.profile_picture}/></div>

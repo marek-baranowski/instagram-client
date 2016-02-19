@@ -1,11 +1,12 @@
 import React from 'react';
 import CommentListContainer from '../containers/CommentListContainer';
+import moment from 'moment';
 
 class ImageDetails extends React.Component {
   render() {
     const {image} = this.props;
     if (!image) return <h2>No such image</h2>;
-    const time = new Date(parseInt(image.created_time) * 1000).toLocaleString();
+    const time = moment.unix(parseInt(image.created_time)).format('hh:mm YYYY-MM-DD');
     return (
       <div className="imagedetails">
         <button className="imagedetails__goback" onClick={this.props.goBack}>Go Back</button>

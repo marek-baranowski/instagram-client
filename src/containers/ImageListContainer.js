@@ -19,8 +19,8 @@ class ImageListContainer extends React.Component {
 
   render() {
     if (this.props.images.isFetching) return <Loader />;
-    return <ImageList tag={this.props.location.query.tag}
-                      images={this.props.images.data} imageClick={this.props.imageClick}/>;
+    return <ImageList tag={this.props.location.query.tag} images={this.props.images.data}
+                      imageClick={this.props.imageClick}/>;
   }
 }
 
