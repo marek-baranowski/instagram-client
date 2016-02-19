@@ -3,4 +3,4 @@ export const ROUTES = {
   PHOTO_DETAILS: 'photo-details'
 };
 
-export const TAGS = ['audi', 'bmw', 'mercedes', 'volvo'];
+export const TAGS = ['javascript', 'coding', 'programmer', 'redux', 'reactjs'];
