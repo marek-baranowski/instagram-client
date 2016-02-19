@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { routeActions } from 'react-router-redux';
 import _ from 'lodash';
 import * as imageActions from '../actions/ImageActions';
 import ImageDetails from '../components/ImageDetails';
@@ -12,7 +13,8 @@ class ImageDetailsContainer extends React.Component {
 
   render() {
     if (this.props.images.isFetching) return <Loader />;
-    return <ImageDetails image={_.find(this.props.images.data, {'id': this.props.location.query.photoId})}/>;
+    return <ImageDetails goBack={this.props.goBack}
+                         image={_.find(this.props.images.data, {'id': this.props.location.query.photoId})}/>;
   }
 }
 
@@ -24,6 +26,9 @@ function mapDispatchToProps(dispatch) {
   return {
     fetchImageById: (imageId) => {
       dispatch(imageActions.fetchImageById(imageId))
+    },
+    goBack: () => {
+      dispatch(routeActions.goBack())
     }
   }
 }
