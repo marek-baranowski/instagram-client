@@ -6,7 +6,6 @@ import configureStore from './stores';
 import Main from './components/Main';
 import ImageListContainer from './containers/ImageListContainer';
 import ImageDetailsContainer from './containers/ImageDetailsContainer';
-import * as tagActions from './actions/TagActions';
 import * as C from './common/consts';
 
 const store = configureStore();
@@ -15,8 +14,6 @@ console.log(store.getState());
 store.subscribe(() => {
   console.log(store.getState());
 });
-
-store.dispatch(tagActions.setTags(['audi', 'bmw', 'mercedez']));
 
 render(
   <Provider store={store}>
