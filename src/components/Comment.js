@@ -5,13 +5,13 @@ class Comment extends React.Component {
     const {comment} = this.props;
     const time = new Date(parseInt(comment.created_time) * 1000).toLocaleString();
     return (
-      <div className="comment clearfix">
-        <div className="comment-profile-picture"><img src={comment.from.profile_picture}/></div>
-        <div className="comment-content">
-          <div className="comment-header">{comment.from.username} at
+      <div className="comments clearfix">
+        <div className="comments__profile-picture"><img src={comment.from.profile_picture}/></div>
+        <div className="comments__content">
+          <div className="comments__header">{comment.from.username} at&nbsp;
             <time>{time}</time>
           </div>
-          <div className="comment-text">{comment.text}</div>
+          {comment.text}
         </div>
       </div>
     )

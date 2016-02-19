@@ -1,0 +1,12 @@
+.imagelist__image {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  width: 50%;
+  @include mq(tablet) {
+    width: 25%;
+  }
+  @include mq(desktop) {
+    width: 20%;
+  }
+}

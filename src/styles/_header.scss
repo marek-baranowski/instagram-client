@@ -1,0 +1,23 @@
+$font-color: #FFFFFF;
+.header {
+  padding: 20px;
+  background-color: #2c3e50;
+  color: $font-color;
+  a {
+    color: $font-color;
+  }
+}
+.header__logo {
+  font-weight: bold;
+  @include mq(tablet) {
+    float: left;
+  }
+}
+.header__tags {
+  @include mq(tablet) {
+    float: right;
+  }
+}
+.header__tag {
+  margin-right: 10px;
+}

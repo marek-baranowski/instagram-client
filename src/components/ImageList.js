@@ -5,7 +5,12 @@ class ImageList extends React.Component {
     return (
       <div>
         {this.props.images.map(function (image, i) {
-          return <img key={i} onClick={this.props.imageClick.bind(null, image.id)} src={image.images.thumbnail.url}/>
+          return (
+            <div key={i} className="imagelist__image">
+              <img onClick={this.props.imageClick.bind(null, image.id)}
+                   src={image.images.thumbnail.url}/>
+            </div>
+          )
         }.bind(this))}
       </div>
     );

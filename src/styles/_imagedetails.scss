@@ -1,0 +1,11 @@
+.imagedetails {
+  width: 100%;
+  @include mq(tablet) {
+    width: 590px;
+    margin: 0 auto;
+  }
+}
+
+.imagedetails__image {
+  width: 100%;
+}

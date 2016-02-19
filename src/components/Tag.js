@@ -1,8 +1,12 @@
 import React from 'react';
 
 class Tag extends React.Component {
+  onClick() {
+    this.props.tagClick();
+    return false;
+  }
   render() {
-    return <button onClick={this.props.tagClick}>#{this.props.tag}</button>;
+    return <a href="#" className="header__tag" onClick={this.props.tagClick.bind(this)}>#{this.props.tag}</a>;
   }
 }
 

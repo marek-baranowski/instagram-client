@@ -1,0 +1,19 @@
+$mq-breakpoints: (
+  mobile:  320px,
+  tablet:  740px,
+  desktop: 980px,
+  wide:    1300px
+);
+@import '../../node_modules/sass-mq/mq';
+@import "_header.scss";
+@import "comments";
+@import "_imagedetails.scss";
+@import "_imagelist.scss";
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}

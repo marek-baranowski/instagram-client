@@ -75,6 +75,7 @@
     "redux-effects": "^0.4.3",
     "redux-effects-fetch": "^0.4.4",
     "redux-multi": "^0.1.12",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^1.0.3",
+    "sass-mq": "^3.2.6"
   }
 }

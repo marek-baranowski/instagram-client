@@ -5,11 +5,11 @@ class TagList extends React.Component {
   render() {
     const {tags} = this.props;
     return (
-      <ul id="tags">
+      <div className="header__tags">
         {tags.data.map(function (tag, i) {
-          return <li key={i}><TagContainer tag={tag}/></li>
+          return <TagContainer key={i} tag={tag}/>
         })}
-      </ul>
+      </div>
     );
   }
 }

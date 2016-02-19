@@ -7,9 +7,7 @@ import Loader from '../components/Loader';
 
 class ImageDetailsContainer extends React.Component {
   componentDidMount() {
-    if (!this.props.images.isFetching && this.props.images.data.length == 0) {
-      this.props.fetchImageById(this.props.location.query.photoId);
-    }
+    this.props.fetchImageById(this.props.location.query.photoId);
   }
 
   render() {
