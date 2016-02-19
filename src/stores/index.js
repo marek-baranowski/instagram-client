@@ -8,9 +8,9 @@ import { syncHistory } from 'react-router-redux';
 
 const reducers = require('../reducers');
 
-module.exports = function (initialState) {
+export default function (initialState) {
   const reduxRouterMiddleware = syncHistory(browserHistory);
   const store = createStore(reducers, applyMiddleware(reduxRouterMiddleware, thunk, multi, effects, fetch),
     initialState);
   return store
-};
+}
