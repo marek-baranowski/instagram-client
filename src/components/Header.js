@@ -5,7 +5,7 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <header className="header clearfix">
-        <div className="header__logo">Instagram client</div>
+        <div className="header__logo" onClick={this.props.logoClick}>Instagram client</div>
         <TagListContainer/>
       </header>
     );

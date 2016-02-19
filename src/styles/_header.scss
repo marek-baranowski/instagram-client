@@ -9,6 +9,7 @@ $font-color: #FFFFFF;
 }
 .header__logo {
   font-weight: bold;
+  cursor: pointer;
   @include mq(tablet) {
     float: left;
   }
