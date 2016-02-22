@@ -13,7 +13,7 @@
 
 ###To create dist package###
 
-    npm run copy & webpack --env=dist
+    npm run dist
 
     
 ###Noteworthy###
