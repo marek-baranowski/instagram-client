@@ -8,8 +8,9 @@ class TagForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit.bind(this)}>
-        <input className="input" ref="tagInput"/><input type="submit" value="Search"/>
+      <form className="search-form" onSubmit={this.onSubmit.bind(this)}>
+        <input className="input" ref="tagInput" placeholder="Type tag..."/>
+        <input className="btn" type="submit" value="Search"/>
       </form>
     );
   }

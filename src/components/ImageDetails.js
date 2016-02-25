@@ -9,7 +9,7 @@ class ImageDetails extends React.Component {
     const time = moment.unix(parseInt(image.created_time)).format('hh:mm YYYY-MM-DD');
     return (
       <div className="imagedetails">
-        <button className="imagedetails__goback" onClick={this.props.goBack}>Go Back</button>
+        <button className="imagedetails__goback btn" onClick={this.props.goBack}>Go Back</button>
         <h2>{image.user.full_name} ({image.user.username}), at&nbsp;
           <time>{time}</time>
         </h2>

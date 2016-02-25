@@ -7,7 +7,7 @@ import HeaderContainer from '../containers/HeaderContainer';
 class MainComponent extends React.Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <HeaderContainer />
         {this.props.children}
       </div>
