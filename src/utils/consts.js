@@ -3,6 +3,6 @@ export const ROUTES = {
   PHOTO_DETAILS: 'photo-details'
 };
 
-export const TAGS = ['javascript', 'coding', 'programmer', 'apps', 'reactjs',
-  'javascript', 'coding', 'programmer', 'apps', 'reactjs',
-  'javascript', 'coding', 'programmer', 'apps', 'reactjs'];
+export const INSTAGRAM_CLIENT_ID = 'a778c35c48824baca6837071dba766df';
+
+export const INSTAGRAM_API_BASE_URL = 'https://api.instagram.com/v1/';

@@ -1,5 +1,6 @@
-const baseUrl = 'https://api.instagram.com/v1/',
-  clientIdQuery = 'client_id=a778c35c48824baca6837071dba766df';
+import {INSTAGRAM_API_BASE_URL, INSTAGRAM_CLIENT_ID} from './consts';
+
+const clientIdQuery = 'client_id=' + INSTAGRAM_CLIENT_ID;
 
 /**
  * Wraps API endpoint into a Yahoo Query Language (YQL) proxy, since Instagram doesn't support NO-CORS requests
@@ -12,21 +13,21 @@ function toYQL(url) {
 }
 
 export function imagesByTag(tag) {
-  return toYQL(baseUrl + 'tags/' + tag + '/media/recent?' + clientIdQuery);
+  return toYQL(INSTAGRAM_API_BASE_URL + 'tags/' + tag + '/media/recent?' + clientIdQuery);
 }
 
 export function popularImages() {
-  return toYQL(baseUrl + 'media/popular?' + clientIdQuery);
+  return toYQL(INSTAGRAM_API_BASE_URL + 'media/popular?' + clientIdQuery);
 }
 
 export function imageById(imageId) {
-  return toYQL(baseUrl + 'media/' + imageId + '?' + clientIdQuery);
+  return toYQL(INSTAGRAM_API_BASE_URL + 'media/' + imageId + '?' + clientIdQuery);
 }
 
 export function tags(tag) {
-  return toYQL(baseUrl + 'tags/search?q=' + tag + '&count=10&' + clientIdQuery);
+  return toYQL(INSTAGRAM_API_BASE_URL + 'tags/search?q=' + tag + '&count=10&' + clientIdQuery);
 }
 
 export function comments(imageId) {
-  return toYQL(baseUrl + 'media/' + imageId + '/comments?' + clientIdQuery);
+  return toYQL(INSTAGRAM_API_BASE_URL + 'media/' + imageId + '/comments?' + clientIdQuery);
 }
