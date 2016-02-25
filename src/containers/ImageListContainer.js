@@ -8,7 +8,13 @@ import * as C from '../utils/consts';
 
 class ImageListContainer extends React.Component {
   componentDidMount() {
-    this.props.fetchImagesByTag(this.props.location.query.tag || 'random');
+    const tag = this.props.location.query.tag;
+    if (tag) {
+      this.props.fetchImagesByTag(this.props.location.query.tag);
+    }
+    else {
+      this.props.fetchPopularImages();
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -32,6 +38,9 @@ function mapDispatchToProps(dispatch) {
   return {
     fetchImagesByTag: (tag) => {
       dispatch(imageActions.fetchImagesByTag(tag))
+    },
+    fetchPopularImages: () => {
+      dispatch(imageActions.fetchPopularImages())
     },
     imageClick: (photoId) => {
       dispatch(routeActions.push({

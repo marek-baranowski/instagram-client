@@ -3,7 +3,9 @@ import React from 'react';
 class TagForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
-    this.props.searchTag(this.refs.tagInput.value.trim());
+    const tag = this.refs.tagInput.value.trim();
+    if (/\S/.test(tag))
+      this.props.searchTag(tag);
   }
 
   render() {

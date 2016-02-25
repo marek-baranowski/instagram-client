@@ -7,8 +7,8 @@ class HeaderComponent extends React.Component {
     return (
       <header className="header clearfix">
         <div className="header__marketing">
-          <h1 className="header__logo" onClick={this.props.logoClick}>Instagram tag searcher</h1>
-          <span>Find tag matches, see pictures with chosen tag</span>
+          <h1 className="header__logo" onClick={this.props.logoClick}>Instagram tag search</h1>
+          <span>Find tag matches and see pictures with selected tag</span>
         </div>
         <div className="header__tags">
           <TagFormContainer />

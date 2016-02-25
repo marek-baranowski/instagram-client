@@ -15,6 +15,10 @@ export function imagesByTag(tag) {
   return toYQL(baseUrl + 'tags/' + tag + '/media/recent?' + clientIdQuery);
 }
 
+export function popularImages() {
+  return toYQL(baseUrl + 'media/popular?' + clientIdQuery);
+}
+
 export function imageById(imageId) {
   return toYQL(baseUrl + 'media/' + imageId + '?' + clientIdQuery);
 }

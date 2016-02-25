@@ -6,7 +6,7 @@ import Loader from '../components/Loader';
 
 class TagListContainer extends React.Component {
   componentDidMount() {
-    this.props.fetchTags('snow');
+    //this.props.fetchTags('snow');
   }
 
   render() {

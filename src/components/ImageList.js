@@ -2,7 +2,7 @@ import React from 'react';
 
 class ImageList extends React.Component {
   render() {
-    const title = this.props.tag ? '#' + this.props.tag : null
+    const title = this.props.tag ? '#' + this.props.tag : 'No tag selected, showing popular pictures';
     return (
       <div>
         <h1 className="imagelist__title">{title}</h1>

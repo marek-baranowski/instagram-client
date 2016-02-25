@@ -1,7 +1,7 @@
 import {createAction} from 'redux-actions';
 import {bind} from 'redux-effects';
 import {fetch} from 'redux-effects-fetch';
-import {imagesByTag, imageById} from '../utils/APIendpoints';
+import {imagesByTag, imageById, popularImages} from '../utils/APIendpoints';
 
 const startFetchingImages = createAction('IMAGES_ARE_LOADING');
 const setImages = createAction('SET_IMAGES');
@@ -10,6 +10,13 @@ export function fetchImagesByTag(tag) {
   return [
     startFetchingImages(),
     bind(fetch(imagesByTag(tag)), ({value}) => setImages(value.query.results.json.data))
+  ]
+}
+
+export function fetchPopularImages() {
+  return [
+    startFetchingImages(),
+    bind(fetch(popularImages()), ({value}) => setImages(value.query.results.json.data))
   ]
 }
 
