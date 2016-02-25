@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {setTags} from '../actions/TagActions';
+import {fetchTags} from '../actions/TagActions';
 import TagList from '../components/TagList';
 import Loader from '../components/Loader';
 import {TAGS} from '../utils/consts';
 
 class TagListContainer extends React.Component {
   componentDidMount() {
-    this.props.setTags(TAGS);
+    this.props.fetchTags('snow');
   }
 
   render() {
     const {tags} = this.props;
     if (tags.isFetching) return <Loader />;
-    return <TagList tags={tags}/>;
+    return <TagList tags={tags.data}/>;
   }
 }
 
@@ -23,8 +23,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    setTags: (tags) => {
-      dispatch(setTags(tags))
+    fetchTags: (tag) => {
+      dispatch(fetchTags(tag))
     }
   }
 }

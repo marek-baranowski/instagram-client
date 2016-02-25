@@ -19,6 +19,10 @@ export function imageById(imageId) {
   return toYQL(baseUrl + 'media/' + imageId + '?' + clientIdQuery);
 }
 
+export function tags(tag) {
+  return toYQL(baseUrl + 'tags/search?q=' + tag + '&count=10&' + clientIdQuery);
+}
+
 export function comments(imageId) {
   return toYQL(baseUrl + 'media/' + imageId + '/comments?' + clientIdQuery);
 }

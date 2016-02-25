@@ -18,6 +18,7 @@ const reducers = {
     SET_IMAGES: commonSetDataReducer
   }, {isFetching: false, data: []}),
   tags: handleActions({
+    TAGS_ARE_LOADING: commonStartFetchingDataReducer,
     SET_TAGS: commonSetDataReducer
   }, {isFetching: false, data: []}),
   comments: handleActions({

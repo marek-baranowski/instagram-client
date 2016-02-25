@@ -1,9 +1,10 @@
 $mq-breakpoints: (
-  mobile:  320px,
-  tablet:  740px,
+  mobile: 320px,
+  tablet: 740px,
   desktop: 980px,
-  wide:    1300px
+  wide: 1300px
 );
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:700);
 @import '../../node_modules/sass-mq/mq';
 @import "_header.scss";
 @import "_comments";
@@ -17,3 +18,31 @@ $mq-breakpoints: (
   height: 0;
   clear: both;
 }
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+}
+
+a {
+  color: #777777;
+}
+
+.input {
+  box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+  color: rgb(119, 119, 119);
+  //height: 39px;
+  vertical-align: middle;
+  //width: 179px;
+  perspective-origin: 89.5px 19.5px;
+  transform-origin: 89.5px 19.5px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px 4px 4px 4px;
+  outline: rgb(119, 119, 119) none 0px;
+  padding: 8px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+

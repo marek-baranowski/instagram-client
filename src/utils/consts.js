@@ -3,4 +3,6 @@ export const ROUTES = {
   PHOTO_DETAILS: 'photo-details'
 };
 
-export const TAGS = ['javascript', 'coding', 'programmer', 'apps', 'reactjs'];
+export const TAGS = ['javascript', 'coding', 'programmer', 'apps', 'reactjs',
+  'javascript', 'coding', 'programmer', 'apps', 'reactjs',
+  'javascript', 'coding', 'programmer', 'apps', 'reactjs'];

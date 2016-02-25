@@ -7,6 +7,7 @@ import Main from './components/Main';
 import ImageListContainer from './containers/ImageListContainer';
 import ImageDetailsContainer from './containers/ImageDetailsContainer';
 import * as C from './utils/consts';
+import {fetchTags} from './actions/TagActions';
 
 const store = configureStore();
 
