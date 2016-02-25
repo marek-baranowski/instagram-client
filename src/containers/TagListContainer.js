@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import {fetchTags} from '../actions/TagActions';
 import TagList from '../components/TagList';
 import Loader from '../components/Loader';
-import {TAGS} from '../utils/consts';
 
 class TagListContainer extends React.Component {
   componentDidMount() {
