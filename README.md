@@ -18,7 +18,6 @@
     
 ###Noteworthy###
 
- - Instagram doesn't support getting any random data, so I needed to hardcode tags
  - Instagram doesn't support NO-CORS requests, so I had to use proxy - **YQL**
 
 
