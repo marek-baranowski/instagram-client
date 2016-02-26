@@ -1,14 +1,7 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { routeActions } from 'react-router-redux';
 import Tag from '../components/Tag';
 import * as C from '../utils/consts';
-
-class TagContainer extends React.Component {
-  render() {
-    return <Tag tag={this.props.tag} tagClick={this.props.tagClick}/>;
-  }
-}
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
@@ -20,4 +13,5 @@ function mapDispatchToProps(dispatch, ownProps) {
     }
   }
 }
-export default connect(null, mapDispatchToProps)(TagContainer)
+
+export default connect(null, mapDispatchToProps)(Tag)

@@ -5,9 +5,6 @@ import TagList from '../components/TagList';
 import Loader from '../components/Loader';
 
 class TagListContainer extends React.Component {
-  componentDidMount() {
-  }
-
   render() {
     const {tags} = this.props;
     if (tags.isFetching) return <Loader />;

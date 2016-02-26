@@ -1,13 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { routeActions } from 'react-router-redux';
 import Header from '../components/Header';
-
-class TagContainer extends React.Component {
-  render() {
-    return <Header logoClick={this.props.logoClick} />;
-  }
-}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -16,4 +9,5 @@ function mapDispatchToProps(dispatch) {
     }
   }
 }
-export default connect(null, mapDispatchToProps)(TagContainer)
+
+export default connect(null, mapDispatchToProps)(Header)
