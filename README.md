@@ -24,7 +24,7 @@ It uses:
 
     
 ###Noteworthy###
-
+ - Containers are Smart Components (contain logic) while Components are Dumb Components (they are only presentional)  as presented [here][5]
  - Instagram doesn't support NO-CORS requests, so I had to use proxy - **YQL** (Yahoo Query Language)
 
 
@@ -32,3 +32,4 @@ It uses:
   [2]: https://github.com/reactjs/react-router-redux
   [3]: https://github.com/acdlite/redux-actions
   [4]: https://github.com/ashaffer/redux-multi
+  [5]: https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.g5li2n98d
